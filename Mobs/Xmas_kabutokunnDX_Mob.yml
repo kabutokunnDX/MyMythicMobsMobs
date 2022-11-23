@@ -1,0 +1,36 @@
+Frost_person:
+  Type: STRAY
+  Display: '&1&l氷&f&l結&fの&0&l廃人'
+  Health: 2000
+  Damage: 30
+  Armor: 4
+  Options:
+    Despawn: false
+    KnockbackResistance: 1
+    PreventItemPickup: false
+    PreventOtherDrops: true
+    MovementSpeed: 0.16
+    NoDamageTicks: 5
+    FollowRange: 30
+    PreventSunburn: true
+  DamageModifiers:
+  - FALL 0
+  - FIRE_TICK 0
+  Drops:
+  - Xmas_Shard 1 1
+  Equipment:
+  - elytra{enchants=MENDING:1} CHEST
+  - blaze_rod{enchants=MENDING:1} HAND
+  KillMessages:
+  - '<target.name>は<mob.name>にボコボコにされた。'
+  AITargetSelectors:
+  - players
+  BossBar:
+    Enabled: true
+    Title: '<mob.name>'
+    Range: 400
+    Color: WHITE
+    Style: SOLID
+  Skills:
+  - skill{s=Frost_person_randomskill} ~onAttack 0.15
+  - skill{s=Frost_person_randomskill} ~onDamaged 0.15

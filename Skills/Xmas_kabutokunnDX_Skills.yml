@@ -1,0 +1,52 @@
+Frost_person_randomskill:
+  Skills:
+  - randomskill{skills=Frost_person_Missile,Frost_person_press,Frost_person_prison,Frost_person_Throw_target}
+
+Frost_person_Missile:
+  Skills:
+  - projectile{onTick=Frost_person_Missile_oT;onHit=Frost_person_Missile_oH}
+  - sound{s=entity.wither.shoot} @self
+
+
+Frost_person_Missile_oT:
+  Skills:
+  - effect:particles{particle=reddust;color=#A9FFFF;a=20} @origin
+
+Frost_person_Missile_oH:
+  Skills:
+  - potion{type=BLINDNESS;duration=100;level=1}
+  - potion{type=SLOW;duration=100;level=100}
+  - damage{amount=25}
+  - damage{amount=4;ignoreArmor=true}
+
+Frost_person_press:
+  Skills:
+  - jump{velocity=2} @PlayersInRadius{r=15}
+  - damage{amount=20} @PlayersInRadius{r=15}
+  - damage{amount=4;ignoreArmor=true} @PlayersInRadius{r=15}
+  - delay 5
+  - leap{velocity=300} @target
+  - delay 3
+  - effect:blockwave{material=blue_ice;radius=15;radiusY=3;velocity=2;duration=20;shape=sphere} @selflocation
+  - potion{type=SLOW;duration=60;level=100} @PlayersInRadius{r=15}
+
+Frost_person_prison:
+  Skills:
+  - sound{s=block.anvil.place} @PlayersInRadius{r=10}
+  - delay 10
+  - sound{s=block.anvil.place} @PlayersInRadius{r=10}
+  - delay 10
+  - sound{s=block.anvil.place} @PlayersInRadius{r=10}
+  - delay 10
+  - sound{s=block.anvil.place} @PlayersInRadius{r=10}
+  - delay 10
+  - sound{s=block.beacon.activate} @PlayersInRadius{r=10}
+  - prison{material=ICE;duration=60;breakable=false} @PlayersInRadius{r=8}
+  - damage{amount=30} @PlayersInRadius{r=8}
+  - damage{amount=4;ignoreArmor=true} @PlayersInRadius{r=8}
+
+Frost_person_Throw_target:
+  Skills:
+  - throw{velocity=10;velocityY=5} @PlayersInRadius{r=7}
+  - damage{amount=23} @PlayersInRadius{r=7}
+  - damage{amount=4;ignoreArmor=true} @PlayersInRadius{r=7}
