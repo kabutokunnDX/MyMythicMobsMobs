@@ -1,0 +1,28 @@
+#2022Xmasevent
+
+angry_santa:
+    Type: VINDICATOR
+    Display: '&4&l怒りのサンタ&f'
+    Health: 60
+    Damage: 12
+    Armor: 5
+    Disguise: player &4&l怒りのサンタ&f setSkin Santa
+    KillMessages:
+    - '<target.name>は悪い子であることが発覚したため、プレゼントをもらうことができなかった。'
+    Options:
+      KnockbackResistance: 1
+      MovementSpeed: 0.35
+      NoDamageTicks: 7
+      Despawn: false
+      MaxCombatDistance: 2
+      PrevetItemPickup: false
+      PrevetOtherDrops: true
+    Drops:
+    - Xmas_Shard 1 1
+    AITargetSelectors:
+    - players
+    DamageModifiers:
+    - MAGIC 2
+    - FALL 0
+    - PROJECTILE 2
+    - FIRE_TICK 0
