@@ -1,15 +1,13 @@
-#2022Xmasevent
-
-angry_santa:
-    Type: VINDICATOR
-    Display: '&4&l怒りのサンタ&f'
-    Health: 60
-    Damage: 12
-    Armor: 5
-    Disguise: player &4&l怒りのサンタ&f setSkin Santa
-    KillMessages:
+angry_santa: #モブの内部名
+    Type: VINDICATOR #モブの種類
+    Display: '&4&l怒りのサンタ&f' #モブの名前
+    Health: 60 #モブの体力
+    Damage: 12 #モブの近接攻撃力
+    Armor: 5 #モブの防御力
+    Disguise: player &4&l怒りのサンタ&f setSkin Santa #プレイヤーのスキンをモブにDisguise
+    KillMessages: #カスタムキルメッセージ
     - '<target.name>は悪い子であることが発覚したため、プレゼントをもらうことができなかった。'
-    Options:
+    Options: #モブのオプション
       KnockbackResistance: 1
       MovementSpeed: 0.35
       NoDamageTicks: 7
@@ -17,11 +15,11 @@ angry_santa:
       MaxCombatDistance: 2
       PrevetItemPickup: false
       PrevetOtherDrops: true
-    Drops:
+    Drops: #モブを倒したときのドロップ品
     -
-    AITargetSelectors:
+    AITargetSelectors: #モブが向かうターゲット
     - players
-    DamageModifiers:
+    DamageModifiers: #モブの耐性
     - MAGIC 2
     - FALL 0
     - PROJECTILE 2
