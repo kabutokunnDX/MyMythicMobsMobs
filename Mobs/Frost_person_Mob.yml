@@ -17,20 +17,20 @@ Frost_person:
   - FALL 0
   - FIRE_TICK 0
   Drops:
-  - Xmas_Shard 1 1
+  - 
   Equipment:
-  - elytra{enchants=MENDING:1} CHEST
-  - blaze_rod{enchants=MENDING:1} HAND
+  - elytra{enchants=MENDING:1} CHEST #モブの装備
+  - blaze_rod{enchants=MENDING:1} HAND #同上
   KillMessages:
   - '<target.name>は<mob.name>にボコボコにされた。'
   AITargetSelectors:
   - players
-  BossBar:
+  BossBar: #ボスバーの設定
     Enabled: true
     Title: '<mob.name>'
     Range: 400
     Color: WHITE
     Style: SOLID
   Skills:
-  - skill{s=Frost_person_randomskill} ~onAttack 0.15
-  - skill{s=Frost_person_randomskill} ~onDamaged 0.15
+  - skill{s=Frost_person_randomskill} ~onAttack 0.15 #スキル/トリガー/確率
+  - skill{s=Frost_person_randomskill} ~onDamaged 0.15 #スキル/トリガー/確率
