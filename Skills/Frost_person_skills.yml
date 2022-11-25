@@ -1,23 +1,23 @@
 Frost_person_randomskill:
   Skills:
-  - randomskill{skills=Frost_person_Missile,Frost_person_press,Frost_person_prison,Frost_person_Throw_target}
+  - randomskill{skills=Frost_person_Missile,Frost_person_press,Frost_person_prison,Frost_person_Throw_target} #ランダムに下のスキルを発動※すべて同じ確率(のはず？)
 
-Frost_person_Missile:
+Frost_person_Missile: #スキルの内部名
   Skills:
-  - projectile{onTick=Frost_person_Missile_oT;onHit=Frost_person_Missile_oH}
-  - sound{s=entity.wither.shoot} @self
+  - projectile{onTick=Frost_person_Missile_oT;onHit=Frost_person_Missile_oH} #ターゲットプレイヤーへ向かってビームを発射
+  - sound{s=entity.wither.shoot} @self #サウンド
 
 
 Frost_person_Missile_oT:
   Skills:
-  - effect:particles{particle=reddust;color=#A9FFFF;a=20} @origin
+  - effect:particles{particle=reddust;color=#A9FFFF;a=20} @origin #ビームのパーティクル
 
 Frost_person_Missile_oH:
   Skills:
-  - potion{type=BLINDNESS;duration=100;level=1}
-  - potion{type=SLOW;duration=100;level=100}
-  - damage{amount=25}
-  - damage{amount=4;ignoreArmor=true}
+  - potion{type=BLINDNESS;duration=100;level=1} #ポーションエフェクト付与
+  - potion{type=SLOW;duration=100;level=100} #ポーションエフェクト付与
+  - damage{amount=25} #ダメージ付与 防御非貫通
+  - damage{amount=4;ignoreArmor=true} #ダメージ付与 防御貫通(ignoreArmor)
 
 Frost_person_press:
   Skills:
