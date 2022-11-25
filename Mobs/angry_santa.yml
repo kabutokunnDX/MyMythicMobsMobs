@@ -18,7 +18,7 @@ angry_santa:
       PrevetItemPickup: false
       PrevetOtherDrops: true
     Drops:
-    - Xmas_Shard 1 1
+    -
     AITargetSelectors:
     - players
     DamageModifiers:
